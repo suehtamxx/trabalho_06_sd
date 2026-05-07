@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_broker
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - rabbit_net
+
+  gerador:
+    build:
+      context: ../gerador-mensagens
+    container_name: gerador_mensagens
+    restart: on-failure
+    networks:
+      - rabbit_net
+    depends_on:
+      - rabbitmq
+
+  consumidor1:
+    build:
+      context: ../consumidor-placa
+    container_name: consumidor_placa
+    restart: on-failure
+    networks:
+      - rabbit_net
+    depends_on:
+      - rabbitmq
+
+  consumidor2:
+    build:
+      context: ../consumidor-sign
+    container_name: consumidor_sign
+    restart: on-failure
+    networks:
+      - rabbit_net
+    depends_on:
+      - rabbitmq
+
+networks:
+  rabbit_net:
+    driver: bridge
