@@ -35,7 +35,7 @@ public class Main {
                 System.out.println(" [.] Processando imagem com IA 2 (Smile)...");
 
                 // Simula o processamento da biblioteca Smile
-                double cpuLoad = smile.math.MathEx.factorial(15);
+                //double cpuLoad = smile.math.MathEx.factorial(15);
 
                 String sinalClassificado = tiposSinais[random.nextInt(tiposSinais.length)];
 

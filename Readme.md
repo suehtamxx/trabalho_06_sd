@@ -24,7 +24,7 @@ O sistema é composto por 4 containers rodando em uma mesma rede Docker (`rabbit
 
 1. Clone este repositório:
    ```bash
-   git clone <URL_DO_SEU_REPOSITORIO>
+   git clone <https://github.com/suehtamxx/trabalho_06_sd.git>
    cd sistema-carga-ia
    ```
 2. Suba a infraestutura completa:

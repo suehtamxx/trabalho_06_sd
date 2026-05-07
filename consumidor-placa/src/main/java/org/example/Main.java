@@ -32,7 +32,7 @@ public class Main {
 
             try {
                 System.out.println(" [.] Processando imagem com IA 1 (Smile)...");
-                double cpuLoad = smile.math.MathEx.factorial(15);
+                //double cpuLoad = smile.math.MathEx.factorial(15);
 
                 // Simula a classificação da IA
                 String tipoClassificado = tiposVeiculo[random.nextInt(tiposVeiculo.length)];

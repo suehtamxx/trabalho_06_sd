@@ -1,4 +1,4 @@
-# Usa uma imagem oficial do Maven com Java 17 (pode mudar o 17 para 21 se estiver usando o Java 21)
+# Usa uma imagem oficial do Maven com Java 11
 FROM maven:3.9-eclipse-temurin-11
 
 # Define o diretório de trabalho dentro do container
